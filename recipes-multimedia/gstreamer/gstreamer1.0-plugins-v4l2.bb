@@ -19,7 +19,7 @@ SRC_URI = " \
 SRCREV_plugin = "0d051f538fe00c8a79fcf12a05a6dac3a9af7dd7"
 SRCREV_common = "12af105243823fc73581db4fd79a46f6d0268dc5"
 
-COMPATIBLE_MACHINE = "(dragonboard-410c)"
+COMPATIBLE_MACHINE = "(dart-sd410)"
 
 S = "${WORKDIR}/git"
 

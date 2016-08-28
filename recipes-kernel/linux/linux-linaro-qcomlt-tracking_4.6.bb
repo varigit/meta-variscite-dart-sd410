@@ -31,7 +31,7 @@ do_compile_append_apq8064() {
 # Wifi firmware has a recognizable arch :(
 ERROR_QA_remove = "arch"
 
-QCOM_BOOTIMG_ROOTFS_dragonboard-410c = "mmcblk0p10"
+QCOM_BOOTIMG_ROOTFS_dart-sd410 = "mmcblk0p10"
 QCOM_BOOTIMG_ROOTFS_dragonboard-820c = "sde18"
 QCOM_BOOTIMG_ROOTFS_ifc6410 = "mmcblk0p12"
 QCOM_BOOTIMG_ROOTFS_sd-600eval = "mmcblk0p12"

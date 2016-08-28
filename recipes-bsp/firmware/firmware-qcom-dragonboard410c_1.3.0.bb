@@ -9,7 +9,7 @@ SRC_URI[sha256sum] = "0f74c25f5c17c528a75138ad08722c835feb4cd7edac8fcafb9746481b
 
 DEPENDS += "mtools-native"
 
-COMPATIBLE_MACHINE = "(dragonboard-410c)"
+COMPATIBLE_MACHINE = "(dart-sd410)"
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 S = "${WORKDIR}/linux-board-support-package-v1.3"
@@ -48,13 +48,13 @@ python qcom_bin_do_unpack() {
 }
 
 python do_unpack() {
-    eula = d.getVar('ACCEPT_EULA_dragonboard-410c', True)
+    eula = d.getVar('ACCEPT_EULA_dart-sd410', True)
     eula_file = d.getVar('QCOM_EULA_FILE', True)
     pkg = d.getVar('PN', True)
     if eula == None:
         bb.fatal("To use '%s' you need to accept the EULA at '%s'. "
                  "Please read it and in case you accept it, write: "
-                 "ACCEPT_EULA_dragonboard-410c = \"1\" in your local.conf." % (pkg, eula_file))
+                 "ACCEPT_EULA_dart-sd410 = \"1\" in your local.conf." % (pkg, eula_file))
     elif eula == '0':
         bb.fatal("To use '%s' you need to accept the EULA." % pkg)
     else:
